@@ -11,9 +11,9 @@ router.get('/', (req, res) => {
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
 });
+
 router.get('/ping', (req, res) => {
-  res.write('Pong!');
-  res.end();
+  res.json({ message: 'pong' });
 });
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
